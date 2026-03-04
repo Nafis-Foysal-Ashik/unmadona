@@ -10,7 +10,7 @@ import About from "./pages/About";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import { Toaster } from "react-hot-toast";
-import EditStudent from "./pages/EditStudent";
+// import EditStudent from "./pages/EditStudent";
 import ProtectedRoute from "./components/ProtectedRoute";
 import HomepageDashboard from "./pages/HomepageDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
