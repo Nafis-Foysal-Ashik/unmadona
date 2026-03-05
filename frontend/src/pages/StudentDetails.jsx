@@ -39,7 +39,7 @@ const StudentDetails = () => {
           <img
             src={
               student.image
-                ? `http://localhost:5000${student.image}`
+                ? `https://unmadona-api.vercel.app${student.image}`
                 : "https://via.placeholder.com/400x300?text=No+Image"
             }
             alt={student.name}

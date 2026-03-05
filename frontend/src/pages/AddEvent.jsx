@@ -32,7 +32,7 @@ const AddEvent = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/events/add",
+        "https://unmadona-api.vercel.app/api/events/add",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

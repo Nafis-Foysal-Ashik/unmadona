@@ -26,7 +26,7 @@ const StudentCorner = () => {
   useEffect(() => {
   const fetchStudents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/students/all");
+      const res = await axios.get("https://unmadona-api.vercel.app/api/students/all");
       setStudents(res.data);
     } catch (error) {
       console.log(error);

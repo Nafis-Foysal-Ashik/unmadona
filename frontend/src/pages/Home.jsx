@@ -16,13 +16,13 @@ const Home = () => {
 
         // Fetch Images
         const imageRes = await axios.get(
-          "http://localhost:5000/api/homepage-images/all"
+          "https://unmadona-api.vercel.app/api/homepage-images/all"
         );
         setImages(imageRes.data);
 
         // Fetch Notice
         const noticeRes = await axios.get(
-          "http://localhost:5000/api/notice/get"
+          "https://unmadona-api.vercel.app/api/notice/get"
         );
         if (noticeRes.data) {
           setNotice(noticeRes.data.noticeText);
@@ -30,7 +30,7 @@ const Home = () => {
 
         // Fetch Events
         const eventRes = await axios.get(
-          "http://localhost:5000/api/events/all"
+          "https://unmadona-api.vercel.app/api/events/all"
         );
         setEvents(eventRes.data);
 
@@ -83,7 +83,7 @@ const Home = () => {
             {images.map((img) => (
               <img
                 key={img._id}
-                src={`http://localhost:5000${img.imageUrl}`}
+                src={`https://unmadona-api.vercel.app${img.imageUrl}`}
                 alt="slider"
                 className="w-full h-full object-cover"
               />
@@ -119,7 +119,7 @@ const Home = () => {
                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition"
               >
                 <img
-                  src={`http://localhost:5000${event.image}`}
+                  src={`https://unmadona-api.vercel.app${event.image}`}
                   alt={event.eventName}
                   className="w-full h-48 object-cover"
                 />
@@ -165,7 +165,7 @@ const Home = () => {
                 className="bg-gray-100 shadow-md rounded-lg overflow-hidden"
               >
                 <img
-                  src={`http://localhost:5000${event.image}`}
+                  src={`https://unmadona-api.vercel.app${event.image}`}
                   alt={event.eventName}
                   className="w-full h-48 object-cover opacity-80"
                 />

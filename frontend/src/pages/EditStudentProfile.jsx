@@ -17,7 +17,7 @@ const EditStudentProfile = () => {
   // Fetch students
   const fetchStudents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/students/all");
+      const res = await axios.get("https://unmadona-api.vercel.app/api/students/all");
       setStudents(res.data);
     } catch (error) {
       console.log(error);
@@ -59,7 +59,7 @@ const EditStudentProfile = () => {
               onClick={async () => {
                 try {
                   await axios.delete(
-                    `http://localhost:5000/api/students/delete/${id}`
+                    `https://unmadona-api.vercel.app/api/students/delete/${id}`
                   );
                   toast.success("Student Deleted");
                   fetchStudents();
@@ -123,7 +123,7 @@ const EditStudentProfile = () => {
 
                   <td className="border p-2">
                     <img
-                      src={`http://localhost:5000${student.image}`}
+                      src={`https://unmadona-api.vercel.app${student.image}`}
                       alt={student.name}
                       className="w-12 h-12 object-cover mx-auto rounded"
                     />
