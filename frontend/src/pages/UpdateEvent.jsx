@@ -36,7 +36,7 @@ const UpdateEvent = () => {
       }
 
       await axios.put(
-        `https://unmadona-7clw.vercel.app/api/events/update/${event._id}`,
+        `http://localhost:5000/api/events/update/${event._id}`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

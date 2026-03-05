@@ -10,7 +10,7 @@ const EditEvent = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("https://unmadona-7clw.vercel.app/api/events/all");
+      const res = await axios.get("http://localhost:5000/api/events/all");
       setEvents(res.data);
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ const EditEvent = () => {
               onClick={async () => {
                 try {
                   await axios.delete(
-                    `https://unmadona-7clw.vercel.app/api/events/delete/${id}`
+                    `http://localhost:5000/api/events/delete/${id}`
                   );
                   toast.success("Event Deleted");
                   fetchEvents();
@@ -86,7 +86,7 @@ const EditEvent = () => {
 
                   <td className="border p-2">
                     <img
-                      src={`https://unmadona-7clw.vercel.app${event.image}`}
+                      src={`http://localhost:5000${event.image}`}
                       alt={event.eventName}
                       className="w-12 h-12 object-cover mx-auto rounded"
                     />

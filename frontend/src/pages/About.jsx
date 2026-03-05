@@ -1,7 +1,9 @@
 import React from "react";
+// import VantaBackground from "../components/VantaBackground";
 
 const About = () => {
   return (
+    //  <VantaBackground>
     <div className="max-w-6xl mx-auto px-6 py-14">
 
       {/* Title */}
@@ -76,6 +78,7 @@ const About = () => {
       </div>
 
     </div>
+    // </VantaBackground>
   );
 };
 

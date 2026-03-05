@@ -8,7 +8,7 @@ const StudentCard = ({ student }) => {
 
       {/* Student Image */}
       <img
-        src={`https://unmadona-7clw.vercel.app${student.image}`}
+        src={`http://localhost:5000${student.image}`}
         alt={student.name}
         className="w-full h-48 object-cover"
       />

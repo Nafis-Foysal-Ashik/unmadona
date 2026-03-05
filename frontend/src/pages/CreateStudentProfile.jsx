@@ -32,7 +32,7 @@ const CreateStudentProfile = () => {
       }
 
       await axios.post(
-        "https://unmadona-7clw.vercel.app/api/students/add-student",
+        "http://localhost:5000/api/students/add-student",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

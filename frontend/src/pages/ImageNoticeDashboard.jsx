@@ -11,7 +11,7 @@ const ImageNoticeDashboard = () => {
   const fetchImages = async () => {
     try {
       const res = await axios.get(
-        "https://unmadona-7clw.vercel.app/api/homepage-images/all"
+        "http://localhost:5000/api/homepage-images/all"
       );
       setImages(res.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const ImageNoticeDashboard = () => {
   const fetchNotice = async () => {
     try {
       const res = await axios.get(
-        "https://unmadona-7clw.vercel.app/api/notice/get"
+        "http://localhost:5000/api/notice/get"
       );
       if (res.data) {
         setNoticeText(res.data.noticeText);
@@ -48,7 +48,7 @@ const ImageNoticeDashboard = () => {
       }
 
       await axios.post(
-        "https://unmadona-7clw.vercel.app/api/homepage-images/upload",
+        "http://localhost:5000/api/homepage-images/upload",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -65,7 +65,7 @@ const ImageNoticeDashboard = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://unmadona-7clw.vercel.app/api/homepage-images/delete/${id}`
+        `http://localhost:5000/api/homepage-images/delete/${id}`
       );
 
       toast.success("Image Deleted");
@@ -80,7 +80,7 @@ const ImageNoticeDashboard = () => {
   const handleSaveNotice = async () => {
     try {
       await axios.post(
-        "https://unmadona-7clw.vercel.app/api/notice/save",
+        "http://localhost:5000/api/notice/save",
         { noticeText }
       );
 
@@ -118,7 +118,7 @@ const ImageNoticeDashboard = () => {
             <div key={img._id} className="relative">
 
               <img
-                src={`https://unmadona-7clw.vercel.app${img.imageUrl}`}
+                src={`http://localhost:5000${img.imageUrl}`}
                 alt="slider"
                 className="w-full h-32 object-cover rounded"
               />

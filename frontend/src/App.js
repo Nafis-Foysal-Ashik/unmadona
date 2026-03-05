@@ -22,9 +22,11 @@ import EventDashboard from "./pages/EventDashboard";
 import AddEvent from "./pages/AddEvent";
 import EditEvent from "./pages/EditEvent";
 import UpdateEvent from "./pages/UpdateEvent";
+// import VantaBackground from "./components/VantaBackground";
 
 const App = () => {
   return (
+    // <VantaBackground>
     <Router>
       <Toaster position="top-right" />
 
@@ -111,6 +113,7 @@ const App = () => {
       <Footer />
 
     </Router>
+    // </VantaBackground>
   );
 };
 
