@@ -70,7 +70,7 @@ const Home = () => {
     <div>
 
       {/* ================= SLIDER ================= */}
-      <div className="w-full h-[815px] overflow-hidden relative">
+      <div className="w-full h-[350px] md:h-[815px] overflow-hidden relative">
 
         {images.length > 0 && (
           <div
@@ -85,7 +85,7 @@ const Home = () => {
                 key={img._id}
                 src={`https://unmadona-api.onrender.com${img.imageUrl}`}
                 alt="slider"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             ))}
           </div>
@@ -95,12 +95,12 @@ const Home = () => {
 
       {/* ================= NOTICE ================= */}
       {notice && (
-        <div className="bg-gray-900 text-white py-3 overflow-hidden">
-          <div className="whitespace-nowrap animate-marquee text-xl font-semibold">
-            {notice}
-          </div>
-        </div>
-      )}
+  <div className="bg-gray-900 text-white py-3 overflow-hidden">
+    <div className="whitespace-nowrap text-xl font-semibold animate-marquee">
+      {notice}
+    </div>
+  </div>
+)}
 
       {/* ================= UPCOMING EVENTS ================= */}
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -183,9 +183,6 @@ const Home = () => {
                     Place : {event.eventPlace}
                   </p>
 
-                  {/* <p className="text-red-600 font-medium mt-2">
-                    Completed
-                  </p> */}
                 </div>
               </div>
             ))}

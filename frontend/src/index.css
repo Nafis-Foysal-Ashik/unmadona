@@ -11,3 +11,20 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* ================= NOTICE MARQUEE ================= */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 8s linear infinite; /* faster speed */
+}
