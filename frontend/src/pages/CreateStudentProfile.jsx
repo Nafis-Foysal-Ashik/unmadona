@@ -32,7 +32,7 @@ const CreateStudentProfile = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/students/add-student",
+        "https://unmadona-api.onrender.com/api/students/add-student",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

@@ -32,7 +32,7 @@ const AddEvent = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/events/add",
+        "https://unmadona-api.onrender.com/api/events/add",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

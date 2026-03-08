@@ -39,7 +39,7 @@ const EditStudentPage = () => {
       }
 
       await axios.put(
-        `http://localhost:5000/api/students/update/${student._id}`,
+        `https://unmadona-api.onrender.com/api/students/update/${student._id}`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
