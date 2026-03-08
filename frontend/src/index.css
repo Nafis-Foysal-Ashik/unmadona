@@ -26,5 +26,5 @@ body {
 .animate-marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 8s linear infinite; /* faster speed */
+  animation: marquee 14s linear infinite; /* faster speed */
 }
