@@ -1,15 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* index.css */
+
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Prata", serif;
+}
+
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.prata {
+  font-family: "Prata", serif;
+}
+
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-}
-
-/* Body default style */
-body {
-  font-family: 'Poppins', sans-serif;
 }
 
 /* ================= NOTICE MARQUEE ================= */

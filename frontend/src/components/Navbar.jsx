@@ -33,7 +33,7 @@ const Navbar = () => {
           </li>
 
           <li className="relative group">
-            <Link to="/students">Student Corner</Link>
+            <Link to="/students">Unmad's</Link>
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
 
             <li>
               <Link to="/students" onClick={() => setMenuOpen(false)}>
-                Student Corner
+                Unmad's
               </Link>
             </li>
 

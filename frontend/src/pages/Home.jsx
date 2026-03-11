@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Title from "../components/Title";
+
 
 const Home = () => {
 
@@ -105,91 +107,96 @@ const Home = () => {
       {/* ================= UPCOMING EVENTS ================= */}
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">
-          Upcoming Events
-        </h2>
+  <div className="my-10">
+    <div className="text-center py-8 text-3xl">
+      <Title text1={"UPCOMING"} text2={"EVENTS"} />
+    </div>
+  </div>
 
-        {upcomingEvents.length === 0 ? (
-          <p>No Upcoming Events</p>
-        ) : (
-          <div className="grid md:grid-cols-3 gap-6">
-            {upcomingEvents.map((event) => (
-              <div
-                key={event._id}
-                className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition"
-              >
-                <img
-                  src={`https://unmadona-api.onrender.com${event.image}`}
-                  alt={event.eventName}
-                  className="w-full h-48 object-cover"
-                />
+  {upcomingEvents.length === 0 ? (
+    <p>No Upcoming Events</p>
+  ) : (
+    <div className="grid md:grid-cols-3 gap-6">
+      {upcomingEvents.map((event) => (
+        <div
+          key={event._id}
+          className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src={`https://unmadona-api.onrender.com${event.image}`}
+            alt={event.eventName}
+            className="w-full h-48 object-cover"
+          />
 
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">
-                    {event.eventName}
-                  </h3>
+          <div className="p-4">
+            <h3 className="text-lg font-semibold">
+              {event.eventName}
+            </h3>
 
-                  <p className="text-gray-500">
-                    Date : {new Date(event.eventDate).toLocaleDateString()}
-                  </p>
+            <p className="text-gray-500">
+              Date : {new Date(event.eventDate).toLocaleDateString()}
+            </p>
 
-                  <p className="text-gray-600 mt-2">
-                    Place : {event.eventPlace}
-                  </p>
+            <p className="text-gray-600 mt-2">
+              Place : {event.eventPlace}
+            </p>
 
-                  <p className="text-blue-600 font-medium mt-2">
-                    Entry Fee: {event.entryFee}
-                  </p>
-                </div>
-              </div>
-            ))}
+            <p className="text-blue-600 font-medium mt-2">
+              Entry Fee: {event.entryFee}
+            </p>
           </div>
-        )}
+        </div>
+      ))}
+    </div>
+  )}
 
-      </div>
+</div>
+
 
       {/* ================= PAST EVENTS ================= */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
 
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">
-          Past Events
-        </h2>
+  <div className="my-10">
+    <div className="text-center py-8 text-3xl">
+      <Title text1={"PAST"} text2={"EVENTS"} />
+    </div>
+  </div>
 
-        {pastEvents.length === 0 ? (
-          <p>No Past Events</p>
-        ) : (
-          <div className="grid md:grid-cols-3 gap-6">
-            {pastEvents.map((event) => (
-              <div
-                key={event._id}
-                className="bg-gray-100 shadow-md rounded-lg overflow-hidden"
-              >
-                <img
-                  src={`https://unmadona-api.onrender.com${event.image}`}
-                  alt={event.eventName}
-                  className="w-full h-48 object-cover opacity-80"
-                />
+  {pastEvents.length === 0 ? (
+    <p>No Past Events</p>
+  ) : (
+    <div className="grid md:grid-cols-3 gap-6">
+      {pastEvents.map((event) => (
+        <div
+          key={event._id}
+          className="bg-gray-100 shadow-md rounded-lg overflow-hidden"
+        >
+          <img
+            src={`https://unmadona-api.onrender.com${event.image}`}
+            alt={event.eventName}
+            className="w-full h-48 object-cover opacity-80"
+          />
 
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">
-                    {event.eventName}
-                  </h3>
+          <div className="p-4">
+            <h3 className="text-lg font-semibold">
+              {event.eventName}
+            </h3>
 
-                  <p className="text-gray-500">
-                    {new Date(event.eventDate).toLocaleDateString()}
-                  </p>
+            <p className="text-gray-500">
+              {new Date(event.eventDate).toLocaleDateString()}
+            </p>
 
-                  <p className="text-gray-600 mt-2">
-                    Place : {event.eventPlace}
-                  </p>
-
-                </div>
-              </div>
-            ))}
+            <p className="text-gray-600 mt-2">
+              Place : {event.eventPlace}
+            </p>
           </div>
-        )}
+        </div>
+      ))}
+    </div>
+  )}
 
-      </div>
+</div>
+
 
     </div>
   );
