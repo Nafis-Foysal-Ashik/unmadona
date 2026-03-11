@@ -26,17 +26,6 @@ const FilterSidebar = ({
         />
       </div>
 
-      <div className="mb-4">
-        <label className="block text-gray-600 mb-1">University</label>
-        <input
-          type="text"
-          placeholder="Search by University"
-          value={university}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
       {/* Filter by Blood Group */}
       <div className="mb-4">
         <label className="block text-gray-600 mb-1">Blood Group</label>
