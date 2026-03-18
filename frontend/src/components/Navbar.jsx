@@ -91,16 +91,16 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {!isAdmin && (
+            {/* {!isAdmin && (
               <li>
                 <Link to="/admin-login" onClick={() => setMenuOpen(false)}>
                   <button className="flex items-center gap-2 px-6 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition">
-                    {/* <FaSignInAlt /> */}
+                    
                     Admin Login
                   </button>
                 </Link>
               </li>
-            )}
+            )} */}
 
           </ul>
         </div>
