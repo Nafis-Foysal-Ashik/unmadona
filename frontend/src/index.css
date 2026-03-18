@@ -44,5 +44,5 @@ html {
 .animate-marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 14s linear infinite; /* faster speed */
+  animation: marquee 18s linear infinite; /* faster speed */
 }
