@@ -45,7 +45,7 @@ const Navbar = () => {
         </ul>
 
         {/* Admin Login Button */}
-        {!isAdmin && (
+        {/* {!isAdmin && (
           <Link to="/admin-login" className="hidden md:block">
             <button
               className="flex items-center gap-2 px-6 py-2 rounded-full font-semibold 
@@ -53,11 +53,10 @@ const Navbar = () => {
               hover:bg-blue-600 hover:border-blue-500 
               transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/40"
             >
-              {/* <FaSignInAlt /> */}
               Admin Login
             </button>
           </Link>
-        )}
+        )} */}
 
         {/* Mobile Menu Button */}
         <button
